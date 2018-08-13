@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.zujuba.dao.mapper.SpendMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.zujuba.dao.Spend" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="ownerClass" property="ownerClass" jdbcType="VARCHAR" />
+    <result column="ownerId" property="ownerId" jdbcType="VARCHAR" />
+    <result column="moneyNum" property="moneyNum" jdbcType="VARCHAR" />
+    <result column="currency" property="currency" jdbcType="VARCHAR" />
+    <result column="spendTime" property="spendTime" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="payee" property="payee" jdbcType="VARCHAR" />
+    <result column="deleteStyle" property="deleteStyle" jdbcType="BIT" />
+    <result column="upTime" property="upTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, ownerClass, ownerId, moneyNum, currency, spendTime, content, payee, deleteStyle, 
+    upTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from spend
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from spend
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.zujuba.dao.Spend" >
+    insert into spend (id, ownerClass, ownerId, 
+      moneyNum, currency, spendTime, 
+      content, payee, deleteStyle, 
+      upTime)
+    values (#{id,jdbcType=VARCHAR}, #{ownerClass,jdbcType=VARCHAR}, #{ownerId,jdbcType=VARCHAR}, 
+      #{moneyNum,jdbcType=VARCHAR}, #{currency,jdbcType=VARCHAR}, #{spendTime,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{payee,jdbcType=VARCHAR}, #{deleteStyle,jdbcType=BIT}, 
+      #{upTime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.zujuba.dao.Spend" >
+    insert into spend
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="ownerClass != null" >
+        ownerClass,
+      </if>
+      <if test="ownerId != null" >
+        ownerId,
+      </if>
+      <if test="moneyNum != null" >
+        moneyNum,
+      </if>
+      <if test="currency != null" >
+        currency,
+      </if>
+      <if test="spendTime != null" >
+        spendTime,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="payee != null" >
+        payee,
+      </if>
+      <if test="deleteStyle != null" >
+        deleteStyle,
+      </if>
+      <if test="upTime != null" >
+        upTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="ownerClass != null" >
+        #{ownerClass,jdbcType=VARCHAR},
+      </if>
+      <if test="ownerId != null" >
+        #{ownerId,jdbcType=VARCHAR},
+      </if>
+      <if test="moneyNum != null" >
+        #{moneyNum,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="spendTime != null" >
+        #{spendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="payee != null" >
+        #{payee,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteStyle != null" >
+        #{deleteStyle,jdbcType=BIT},
+      </if>
+      <if test="upTime != null" >
+        #{upTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.zujuba.dao.Spend" >
+    update spend
+    <set >
+      <if test="ownerClass != null" >
+        ownerClass = #{ownerClass,jdbcType=VARCHAR},
+      </if>
+      <if test="ownerId != null" >
+        ownerId = #{ownerId,jdbcType=VARCHAR},
+      </if>
+      <if test="moneyNum != null" >
+        moneyNum = #{moneyNum,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null" >
+        currency = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="spendTime != null" >
+        spendTime = #{spendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="payee != null" >
+        payee = #{payee,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteStyle != null" >
+        deleteStyle = #{deleteStyle,jdbcType=BIT},
+      </if>
+      <if test="upTime != null" >
+        upTime = #{upTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.zujuba.dao.Spend" >
+    update spend
+    set ownerClass = #{ownerClass,jdbcType=VARCHAR},
+      ownerId = #{ownerId,jdbcType=VARCHAR},
+      moneyNum = #{moneyNum,jdbcType=VARCHAR},
+      currency = #{currency,jdbcType=VARCHAR},
+      spendTime = #{spendTime,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      payee = #{payee,jdbcType=VARCHAR},
+      deleteStyle = #{deleteStyle,jdbcType=BIT},
+      upTime = #{upTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

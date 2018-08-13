@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.renchaigao.zujuba.dao.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.renchaigao.zujuba.dao.User" >
+    <id column="Id" property="id" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="ageLevel" property="ageLevel" jdbcType="VARCHAR" />
+    <result column="realName" property="realName" jdbcType="VARCHAR" />
+    <result column="nickName" property="nickName" jdbcType="VARCHAR" />
+    <result column="idCard" property="idCard" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="job" property="job" jdbcType="VARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+    <result column="marriage" property="marriage" jdbcType="VARCHAR" />
+    <result column="userPWD" property="userPWD" jdbcType="VARCHAR" />
+    <result column="token" property="token" jdbcType="VARCHAR" />
+    <result column="picPath" property="picPath" jdbcType="VARCHAR" />
+    <result column="deleteStyle" property="deleteStyle" jdbcType="BIT" />
+    <result column="upTime" property="upTime" jdbcType="VARCHAR" />
+    <result column="myOpenInfoId" property="myOpenInfoId" jdbcType="VARCHAR" />
+    <result column="userInfoId" property="userInfoId" jdbcType="VARCHAR" />
+    <result column="uniqueId" property="uniqueId" jdbcType="VARCHAR" />
+    <result column="myTeamsId" property="myTeamsId" jdbcType="VARCHAR" />
+    <result column="myGamesId" property="myGamesId" jdbcType="VARCHAR" />
+    <result column="myStoresId" property="myStoresId" jdbcType="VARCHAR" />
+    <result column="photoInfoId" property="photoInfoId" jdbcType="VARCHAR" />
+    <result column="myAddressId" property="myAddressId" jdbcType="VARCHAR" />
+    <result column="myRankInfoId" property="myRankInfoId" jdbcType="VARCHAR" />
+    <result column="mySpendInfoId" property="mySpendInfoId" jdbcType="VARCHAR" />
+    <result column="myMessageInfoId" property="myMessageInfoId" jdbcType="VARCHAR" />
+    <result column="myFriendInfoId" property="myFriendInfoId" jdbcType="VARCHAR" />
+    <result column="myIntegrationInfoId" property="myIntegrationInfoId" jdbcType="VARCHAR" />
+    <result column="peopleListId" property="peopleListId" jdbcType="VARCHAR" />
+    <result column="myPermissionInfoId" property="myPermissionInfoId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Id, age, ageLevel, realName, nickName, idCard, gender, job, telephone, marriage, 
+    userPWD, token, picPath, deleteStyle, upTime, myOpenInfoId, userInfoId, uniqueId, 
+    myTeamsId, myGamesId, myStoresId, photoInfoId, myAddressId, myRankInfoId, mySpendInfoId, 
+    myMessageInfoId, myFriendInfoId, myIntegrationInfoId, peopleListId, myPermissionInfoId
+  </sql>
+  <select id="selectByTelephone" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where telephone = #{telephone,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where Id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from user
+    where Id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.renchaigao.zujuba.dao.User" >
+    insert into user (Id, age, ageLevel, 
+      realName, nickName, idCard, 
+      gender, job, telephone, 
+      marriage, userPWD, token, 
+      picPath, deleteStyle, upTime, 
+      myOpenInfoId, userInfoId, uniqueId, 
+      myTeamsId, myGamesId, myStoresId, 
+      photoInfoId, myAddressId, myRankInfoId, 
+      mySpendInfoId, myMessageInfoId, myFriendInfoId, 
+      myIntegrationInfoId, peopleListId, myPermissionInfoId
+      )
+    values (#{id,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, #{ageLevel,jdbcType=VARCHAR}, 
+      #{realName,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, 
+      #{marriage,jdbcType=VARCHAR}, #{userPWD,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, 
+      #{picPath,jdbcType=VARCHAR}, #{deleteStyle,jdbcType=BIT}, #{upTime,jdbcType=VARCHAR}, 
+      #{myOpenInfoId,jdbcType=VARCHAR}, #{userInfoId,jdbcType=VARCHAR}, #{uniqueId,jdbcType=VARCHAR}, 
+      #{myTeamsId,jdbcType=VARCHAR}, #{myGamesId,jdbcType=VARCHAR}, #{myStoresId,jdbcType=VARCHAR}, 
+      #{photoInfoId,jdbcType=VARCHAR}, #{myAddressId,jdbcType=VARCHAR}, #{myRankInfoId,jdbcType=VARCHAR}, 
+      #{mySpendInfoId,jdbcType=VARCHAR}, #{myMessageInfoId,jdbcType=VARCHAR}, #{myFriendInfoId,jdbcType=VARCHAR}, 
+      #{myIntegrationInfoId,jdbcType=VARCHAR}, #{peopleListId,jdbcType=VARCHAR}, #{myPermissionInfoId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.renchaigao.zujuba.dao.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        Id,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="ageLevel != null" >
+        ageLevel,
+      </if>
+      <if test="realName != null" >
+        realName,
+      </if>
+      <if test="nickName != null" >
+        nickName,
+      </if>
+      <if test="idCard != null" >
+        idCard,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="job != null" >
+        job,
+      </if>
+      <if test="telephone != null" >
+        telephone,
+      </if>
+      <if test="marriage != null" >
+        marriage,
+      </if>
+      <if test="userPWD != null" >
+        userPWD,
+      </if>
+      <if test="token != null" >
+        token,
+      </if>
+      <if test="picPath != null" >
+        picPath,
+      </if>
+      <if test="deleteStyle != null" >
+        deleteStyle,
+      </if>
+      <if test="upTime != null" >
+        upTime,
+      </if>
+      <if test="myOpenInfoId != null" >
+        myOpenInfoId,
+      </if>
+      <if test="userInfoId != null" >
+        userInfoId,
+      </if>
+      <if test="uniqueId != null" >
+        uniqueId,
+      </if>
+      <if test="myTeamsId != null" >
+        myTeamsId,
+      </if>
+      <if test="myGamesId != null" >
+        myGamesId,
+      </if>
+      <if test="myStoresId != null" >
+        myStoresId,
+      </if>
+      <if test="photoInfoId != null" >
+        photoInfoId,
+      </if>
+      <if test="myAddressId != null" >
+        myAddressId,
+      </if>
+      <if test="myRankInfoId != null" >
+        myRankInfoId,
+      </if>
+      <if test="mySpendInfoId != null" >
+        mySpendInfoId,
+      </if>
+      <if test="myMessageInfoId != null" >
+        myMessageInfoId,
+      </if>
+      <if test="myFriendInfoId != null" >
+        myFriendInfoId,
+      </if>
+      <if test="myIntegrationInfoId != null" >
+        myIntegrationInfoId,
+      </if>
+      <if test="peopleListId != null" >
+        peopleListId,
+      </if>
+      <if test="myPermissionInfoId != null" >
+        myPermissionInfoId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="ageLevel != null" >
+        #{ageLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null" >
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="marriage != null" >
+        #{marriage,jdbcType=VARCHAR},
+      </if>
+      <if test="userPWD != null" >
+        #{userPWD,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="picPath != null" >
+        #{picPath,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteStyle != null" >
+        #{deleteStyle,jdbcType=BIT},
+      </if>
+      <if test="upTime != null" >
+        #{upTime,jdbcType=VARCHAR},
+      </if>
+      <if test="myOpenInfoId != null" >
+        #{myOpenInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="userInfoId != null" >
+        #{userInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueId != null" >
+        #{uniqueId,jdbcType=VARCHAR},
+      </if>
+      <if test="myTeamsId != null" >
+        #{myTeamsId,jdbcType=VARCHAR},
+      </if>
+      <if test="myGamesId != null" >
+        #{myGamesId,jdbcType=VARCHAR},
+      </if>
+      <if test="myStoresId != null" >
+        #{myStoresId,jdbcType=VARCHAR},
+      </if>
+      <if test="photoInfoId != null" >
+        #{photoInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myAddressId != null" >
+        #{myAddressId,jdbcType=VARCHAR},
+      </if>
+      <if test="myRankInfoId != null" >
+        #{myRankInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="mySpendInfoId != null" >
+        #{mySpendInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myMessageInfoId != null" >
+        #{myMessageInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myFriendInfoId != null" >
+        #{myFriendInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myIntegrationInfoId != null" >
+        #{myIntegrationInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="peopleListId != null" >
+        #{peopleListId,jdbcType=VARCHAR},
+      </if>
+      <if test="myPermissionInfoId != null" >
+        #{myPermissionInfoId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.renchaigao.zujuba.dao.User" >
+    update user
+    <set >
+      <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="ageLevel != null" >
+        ageLevel = #{ageLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null" >
+        realName = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        nickName = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        idCard = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        job = #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="marriage != null" >
+        marriage = #{marriage,jdbcType=VARCHAR},
+      </if>
+      <if test="userPWD != null" >
+        userPWD = #{userPWD,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="picPath != null" >
+        picPath = #{picPath,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteStyle != null" >
+        deleteStyle = #{deleteStyle,jdbcType=BIT},
+      </if>
+      <if test="upTime != null" >
+        upTime = #{upTime,jdbcType=VARCHAR},
+      </if>
+      <if test="myOpenInfoId != null" >
+        myOpenInfoId = #{myOpenInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="userInfoId != null" >
+        userInfoId = #{userInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueId != null" >
+        uniqueId = #{uniqueId,jdbcType=VARCHAR},
+      </if>
+      <if test="myTeamsId != null" >
+        myTeamsId = #{myTeamsId,jdbcType=VARCHAR},
+      </if>
+      <if test="myGamesId != null" >
+        myGamesId = #{myGamesId,jdbcType=VARCHAR},
+      </if>
+      <if test="myStoresId != null" >
+        myStoresId = #{myStoresId,jdbcType=VARCHAR},
+      </if>
+      <if test="photoInfoId != null" >
+        photoInfoId = #{photoInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myAddressId != null" >
+        myAddressId = #{myAddressId,jdbcType=VARCHAR},
+      </if>
+      <if test="myRankInfoId != null" >
+        myRankInfoId = #{myRankInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="mySpendInfoId != null" >
+        mySpendInfoId = #{mySpendInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myMessageInfoId != null" >
+        myMessageInfoId = #{myMessageInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myFriendInfoId != null" >
+        myFriendInfoId = #{myFriendInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="myIntegrationInfoId != null" >
+        myIntegrationInfoId = #{myIntegrationInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="peopleListId != null" >
+        peopleListId = #{peopleListId,jdbcType=VARCHAR},
+      </if>
+      <if test="myPermissionInfoId != null" >
+        myPermissionInfoId = #{myPermissionInfoId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.renchaigao.zujuba.dao.User" >
+    update user
+    set age = #{age,jdbcType=VARCHAR},
+      ageLevel = #{ageLevel,jdbcType=VARCHAR},
+      realName = #{realName,jdbcType=VARCHAR},
+      nickName = #{nickName,jdbcType=VARCHAR},
+      idCard = #{idCard,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      job = #{job,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      marriage = #{marriage,jdbcType=VARCHAR},
+      userPWD = #{userPWD,jdbcType=VARCHAR},
+      token = #{token,jdbcType=VARCHAR},
+      picPath = #{picPath,jdbcType=VARCHAR},
+      deleteStyle = #{deleteStyle,jdbcType=BIT},
+      upTime = #{upTime,jdbcType=VARCHAR},
+      myOpenInfoId = #{myOpenInfoId,jdbcType=VARCHAR},
+      userInfoId = #{userInfoId,jdbcType=VARCHAR},
+      uniqueId = #{uniqueId,jdbcType=VARCHAR},
+      myTeamsId = #{myTeamsId,jdbcType=VARCHAR},
+      myGamesId = #{myGamesId,jdbcType=VARCHAR},
+      myStoresId = #{myStoresId,jdbcType=VARCHAR},
+      photoInfoId = #{photoInfoId,jdbcType=VARCHAR},
+      myAddressId = #{myAddressId,jdbcType=VARCHAR},
+      myRankInfoId = #{myRankInfoId,jdbcType=VARCHAR},
+      mySpendInfoId = #{mySpendInfoId,jdbcType=VARCHAR},
+      myMessageInfoId = #{myMessageInfoId,jdbcType=VARCHAR},
+      myFriendInfoId = #{myFriendInfoId,jdbcType=VARCHAR},
+      myIntegrationInfoId = #{myIntegrationInfoId,jdbcType=VARCHAR},
+      peopleListId = #{peopleListId,jdbcType=VARCHAR},
+      myPermissionInfoId = #{myPermissionInfoId,jdbcType=VARCHAR}
+    where Id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
