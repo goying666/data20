@@ -1,10 +1,11 @@
 package com.renchaigao.zujuba.mongoDB.info.user;
 
+import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class myPlayGamesInfo {
-    private String id;
+public class myPlayGamesInfo extends BasicObject {
+
 }

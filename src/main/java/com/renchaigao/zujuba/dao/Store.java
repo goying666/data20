@@ -1,8 +1,7 @@
 package com.renchaigao.zujuba.dao;
 
 public class Store {
-    private String id;
-
+    private String id ;
     private String ownerId;
 
     private String name;
@@ -27,31 +26,33 @@ public class Store {
 
     private Boolean deleteStyle;
 
-    private String upTime;
+    private String upTime ;
 
-    private String addressId;
+    private String addressInfoId;
 
-    private String storeTeamId;
+    private String storeTeamInfoId;
 
-    private String statusId;
+    private String storeShoppingInfoId;
 
-    private String shoppingId;
+    private String storeEvaluationInfoId;
 
-    private String evaluationId;
+    private String storePackageInfoId;
 
-    private String packageId;
+    private String storePhotoInfoId;
 
-    private String picturesPathId;
+    private String storeHardwareInfoId;
 
-    private String hardwareId;
+    private String storeEquipmentInfoId;
 
-    private String equipmentId;
+    private String storeIntegrationInfoId;
 
-    private String integralId;
+    private String storeBusinessInfoId;
 
-    private String historyId;
+    private Integer maxPeopleSum;
 
-    private String businessTimeId;
+    private Integer maxDeskSum;
+
+    private String storeRankInfoId;
 
     public String getId() {
         return id;
@@ -165,99 +166,107 @@ public class Store {
         this.upTime = upTime == null ? null : upTime.trim();
     }
 
-    public String getAddressId() {
-        return addressId;
+    public String getAddressInfoId() {
+        return addressInfoId;
     }
 
-    public void setAddressId(String addressId) {
-        this.addressId = addressId == null ? null : addressId.trim();
+    public void setAddressInfoId(String addressInfoId) {
+        this.addressInfoId = addressInfoId == null ? null : addressInfoId.trim();
     }
 
-    public String getStoreTeamId() {
-        return storeTeamId;
+    public String getStoreTeamInfoId() {
+        return storeTeamInfoId;
     }
 
-    public void setStoreTeamId(String storeTeamId) {
-        this.storeTeamId = storeTeamId == null ? null : storeTeamId.trim();
+    public void setStoreTeamInfoId(String storeTeamInfoId) {
+        this.storeTeamInfoId = storeTeamInfoId == null ? null : storeTeamInfoId.trim();
     }
 
-    public String getStatusId() {
-        return statusId;
+    public String getStoreShoppingInfoId() {
+        return storeShoppingInfoId;
     }
 
-    public void setStatusId(String statusId) {
-        this.statusId = statusId == null ? null : statusId.trim();
+    public void setStoreShoppingInfoId(String storeShoppingInfoId) {
+        this.storeShoppingInfoId = storeShoppingInfoId == null ? null : storeShoppingInfoId.trim();
     }
 
-    public String getShoppingId() {
-        return shoppingId;
+    public String getStoreEvaluationInfoId() {
+        return storeEvaluationInfoId;
     }
 
-    public void setShoppingId(String shoppingId) {
-        this.shoppingId = shoppingId == null ? null : shoppingId.trim();
+    public void setStoreEvaluationInfoId(String storeEvaluationInfoId) {
+        this.storeEvaluationInfoId = storeEvaluationInfoId == null ? null : storeEvaluationInfoId.trim();
     }
 
-    public String getEvaluationId() {
-        return evaluationId;
+    public String getStorePackageInfoId() {
+        return storePackageInfoId;
     }
 
-    public void setEvaluationId(String evaluationId) {
-        this.evaluationId = evaluationId == null ? null : evaluationId.trim();
+    public void setStorePackageInfoId(String storePackageInfoId) {
+        this.storePackageInfoId = storePackageInfoId == null ? null : storePackageInfoId.trim();
     }
 
-    public String getPackageId() {
-        return packageId;
+    public String getStorePhotoInfoId() {
+        return storePhotoInfoId;
     }
 
-    public void setPackageId(String packageId) {
-        this.packageId = packageId == null ? null : packageId.trim();
+    public void setStorePhotoInfoId(String storePhotoInfoId) {
+        this.storePhotoInfoId = storePhotoInfoId == null ? null : storePhotoInfoId.trim();
     }
 
-    public String getPicturesPathId() {
-        return picturesPathId;
+    public String getStoreHardwareInfoId() {
+        return storeHardwareInfoId;
     }
 
-    public void setPicturesPathId(String picturesPathId) {
-        this.picturesPathId = picturesPathId == null ? null : picturesPathId.trim();
+    public void setStoreHardwareInfoId(String storeHardwareInfoId) {
+        this.storeHardwareInfoId = storeHardwareInfoId == null ? null : storeHardwareInfoId.trim();
     }
 
-    public String getHardwareId() {
-        return hardwareId;
+    public String getStoreEquipmentInfoId() {
+        return storeEquipmentInfoId;
     }
 
-    public void setHardwareId(String hardwareId) {
-        this.hardwareId = hardwareId == null ? null : hardwareId.trim();
+    public void setStoreEquipmentInfoId(String storeEquipmentInfoId) {
+        this.storeEquipmentInfoId = storeEquipmentInfoId == null ? null : storeEquipmentInfoId.trim();
     }
 
-    public String getEquipmentId() {
-        return equipmentId;
+    public String getStoreIntegrationInfoId() {
+        return storeIntegrationInfoId;
     }
 
-    public void setEquipmentId(String equipmentId) {
-        this.equipmentId = equipmentId == null ? null : equipmentId.trim();
+    public void setStoreIntegrationInfoId(String storeIntegrationInfoId) {
+        this.storeIntegrationInfoId = storeIntegrationInfoId == null ? null : storeIntegrationInfoId.trim();
     }
 
-    public String getIntegralId() {
-        return integralId;
+    public String getStoreBusinessInfoId() {
+        return storeBusinessInfoId;
     }
 
-    public void setIntegralId(String integralId) {
-        this.integralId = integralId == null ? null : integralId.trim();
+    public void setStoreBusinessInfoId(String storeBusinessInfoId) {
+        this.storeBusinessInfoId = storeBusinessInfoId == null ? null : storeBusinessInfoId.trim();
     }
 
-    public String getHistoryId() {
-        return historyId;
+    public Integer getMaxPeopleSum() {
+        return maxPeopleSum;
     }
 
-    public void setHistoryId(String historyId) {
-        this.historyId = historyId == null ? null : historyId.trim();
+    public void setMaxPeopleSum(Integer maxPeopleSum) {
+        this.maxPeopleSum = maxPeopleSum;
     }
 
-    public String getBusinessTimeId() {
-        return businessTimeId;
+    public Integer getMaxDeskSum() {
+        return maxDeskSum;
     }
 
-    public void setBusinessTimeId(String businessTimeId) {
-        this.businessTimeId = businessTimeId == null ? null : businessTimeId.trim();
+    public void setMaxDeskSum(Integer maxDeskSum) {
+        this.maxDeskSum = maxDeskSum;
+    }
+
+    public String getStoreRankInfoId() {
+        return storeRankInfoId;
+    }
+
+    public void setStoreRankInfoId(String storeRankInfoId) {
+        this.storeRankInfoId = storeRankInfoId == null ? null : storeRankInfoId.trim();
     }
 }

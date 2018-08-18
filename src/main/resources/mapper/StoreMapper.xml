@@ -16,24 +16,26 @@
     <result column="state" property="state" jdbcType="VARCHAR" />
     <result column="deleteStyle" property="deleteStyle" jdbcType="BIT" />
     <result column="upTime" property="upTime" jdbcType="VARCHAR" />
-    <result column="addressId" property="addressId" jdbcType="VARCHAR" />
-    <result column="storeTeamId" property="storeTeamId" jdbcType="VARCHAR" />
-    <result column="statusId" property="statusId" jdbcType="VARCHAR" />
-    <result column="shoppingId" property="shoppingId" jdbcType="VARCHAR" />
-    <result column="evaluationId" property="evaluationId" jdbcType="VARCHAR" />
-    <result column="packageId" property="packageId" jdbcType="VARCHAR" />
-    <result column="picturesPathId" property="picturesPathId" jdbcType="VARCHAR" />
-    <result column="hardwareId" property="hardwareId" jdbcType="VARCHAR" />
-    <result column="equipmentId" property="equipmentId" jdbcType="VARCHAR" />
-    <result column="integralId" property="integralId" jdbcType="VARCHAR" />
-    <result column="historyId" property="historyId" jdbcType="VARCHAR" />
-    <result column="businessTimeId" property="businessTimeId" jdbcType="VARCHAR" />
+    <result column="addressInfoId" property="addressInfoId" jdbcType="VARCHAR" />
+    <result column="storeTeamInfoId" property="storeTeamInfoId" jdbcType="VARCHAR" />
+    <result column="storeShoppingInfoId" property="storeShoppingInfoId" jdbcType="VARCHAR" />
+    <result column="storeEvaluationInfoId" property="storeEvaluationInfoId" jdbcType="VARCHAR" />
+    <result column="storePackageInfoId" property="storePackageInfoId" jdbcType="VARCHAR" />
+    <result column="storePhotoInfoId" property="storePhotoInfoId" jdbcType="VARCHAR" />
+    <result column="storeHardwareInfoId" property="storeHardwareInfoId" jdbcType="VARCHAR" />
+    <result column="storeEquipmentInfoId" property="storeEquipmentInfoId" jdbcType="VARCHAR" />
+    <result column="storeIntegrationInfoId" property="storeIntegrationInfoId" jdbcType="VARCHAR" />
+    <result column="storeBusinessInfoId" property="storeBusinessInfoId" jdbcType="VARCHAR" />
+    <result column="maxPeopleSum" property="maxPeopleSum" jdbcType="INTEGER" />
+    <result column="maxDeskSum" property="maxDeskSum" jdbcType="INTEGER" />
+    <result column="storeRankInfoId" property="storeRankInfoId" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     Id, ownerId, name, createrId, storeclass, phonenum, telephonenum, contact, placeinfo, 
-    tipsinfo, createTime, state, deleteStyle, upTime, addressId, storeTeamId, statusId, 
-    shoppingId, evaluationId, packageId, picturesPathId, hardwareId, equipmentId, integralId, 
-    historyId, businessTimeId
+    tipsinfo, createTime, state, deleteStyle, upTime, addressInfoId, storeTeamInfoId, 
+    storeShoppingInfoId, storeEvaluationInfoId, storePackageInfoId, storePhotoInfoId, 
+    storeHardwareInfoId, storeEquipmentInfoId, storeIntegrationInfoId, storeBusinessInfoId, 
+    maxPeopleSum, maxDeskSum, storeRankInfoId
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -50,20 +52,22 @@
       createrId, storeclass, phonenum, 
       telephonenum, contact, placeinfo, 
       tipsinfo, createTime, state, 
-      deleteStyle, upTime, addressId, 
-      storeTeamId, statusId, shoppingId, 
-      evaluationId, packageId, picturesPathId, 
-      hardwareId, equipmentId, integralId, 
-      historyId, businessTimeId)
+      deleteStyle, upTime, addressInfoId, 
+      storeTeamInfoId, storeShoppingInfoId, storeEvaluationInfoId, 
+      storePackageInfoId, storePhotoInfoId, storeHardwareInfoId, 
+      storeEquipmentInfoId, storeIntegrationInfoId, 
+      storeBusinessInfoId, maxPeopleSum, maxDeskSum, 
+      storeRankInfoId)
     values (#{id,jdbcType=VARCHAR}, #{ownerId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
       #{createrId,jdbcType=VARCHAR}, #{storeclass,jdbcType=VARCHAR}, #{phonenum,jdbcType=VARCHAR}, 
       #{telephonenum,jdbcType=VARCHAR}, #{contact,jdbcType=VARCHAR}, #{placeinfo,jdbcType=VARCHAR}, 
       #{tipsinfo,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
-      #{deleteStyle,jdbcType=BIT}, #{upTime,jdbcType=VARCHAR}, #{addressId,jdbcType=VARCHAR}, 
-      #{storeTeamId,jdbcType=VARCHAR}, #{statusId,jdbcType=VARCHAR}, #{shoppingId,jdbcType=VARCHAR}, 
-      #{evaluationId,jdbcType=VARCHAR}, #{packageId,jdbcType=VARCHAR}, #{picturesPathId,jdbcType=VARCHAR}, 
-      #{hardwareId,jdbcType=VARCHAR}, #{equipmentId,jdbcType=VARCHAR}, #{integralId,jdbcType=VARCHAR}, 
-      #{historyId,jdbcType=VARCHAR}, #{businessTimeId,jdbcType=VARCHAR})
+      #{deleteStyle,jdbcType=BIT}, #{upTime,jdbcType=VARCHAR}, #{addressInfoId,jdbcType=VARCHAR}, 
+      #{storeTeamInfoId,jdbcType=VARCHAR}, #{storeShoppingInfoId,jdbcType=VARCHAR}, #{storeEvaluationInfoId,jdbcType=VARCHAR}, 
+      #{storePackageInfoId,jdbcType=VARCHAR}, #{storePhotoInfoId,jdbcType=VARCHAR}, #{storeHardwareInfoId,jdbcType=VARCHAR}, 
+      #{storeEquipmentInfoId,jdbcType=VARCHAR}, #{storeIntegrationInfoId,jdbcType=VARCHAR}, 
+      #{storeBusinessInfoId,jdbcType=VARCHAR}, #{maxPeopleSum,jdbcType=INTEGER}, #{maxDeskSum,jdbcType=INTEGER}, 
+      #{storeRankInfoId,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.renchaigao.zujuba.dao.Store" >
     insert into store
@@ -110,41 +114,44 @@
       <if test="upTime != null" >
         upTime,
       </if>
-      <if test="addressId != null" >
-        addressId,
+      <if test="addressInfoId != null" >
+        addressInfoId,
       </if>
-      <if test="storeTeamId != null" >
-        storeTeamId,
+      <if test="storeTeamInfoId != null" >
+        storeTeamInfoId,
       </if>
-      <if test="statusId != null" >
-        statusId,
+      <if test="storeShoppingInfoId != null" >
+        storeShoppingInfoId,
       </if>
-      <if test="shoppingId != null" >
-        shoppingId,
+      <if test="storeEvaluationInfoId != null" >
+        storeEvaluationInfoId,
       </if>
-      <if test="evaluationId != null" >
-        evaluationId,
+      <if test="storePackageInfoId != null" >
+        storePackageInfoId,
       </if>
-      <if test="packageId != null" >
-        packageId,
+      <if test="storePhotoInfoId != null" >
+        storePhotoInfoId,
       </if>
-      <if test="picturesPathId != null" >
-        picturesPathId,
+      <if test="storeHardwareInfoId != null" >
+        storeHardwareInfoId,
       </if>
-      <if test="hardwareId != null" >
-        hardwareId,
+      <if test="storeEquipmentInfoId != null" >
+        storeEquipmentInfoId,
       </if>
-      <if test="equipmentId != null" >
-        equipmentId,
+      <if test="storeIntegrationInfoId != null" >
+        storeIntegrationInfoId,
       </if>
-      <if test="integralId != null" >
-        integralId,
+      <if test="storeBusinessInfoId != null" >
+        storeBusinessInfoId,
       </if>
-      <if test="historyId != null" >
-        historyId,
+      <if test="maxPeopleSum != null" >
+        maxPeopleSum,
       </if>
-      <if test="businessTimeId != null" >
-        businessTimeId,
+      <if test="maxDeskSum != null" >
+        maxDeskSum,
+      </if>
+      <if test="storeRankInfoId != null" >
+        storeRankInfoId,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -190,41 +197,44 @@
       <if test="upTime != null" >
         #{upTime,jdbcType=VARCHAR},
       </if>
-      <if test="addressId != null" >
-        #{addressId,jdbcType=VARCHAR},
+      <if test="addressInfoId != null" >
+        #{addressInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="storeTeamId != null" >
-        #{storeTeamId,jdbcType=VARCHAR},
+      <if test="storeTeamInfoId != null" >
+        #{storeTeamInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="statusId != null" >
-        #{statusId,jdbcType=VARCHAR},
+      <if test="storeShoppingInfoId != null" >
+        #{storeShoppingInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="shoppingId != null" >
-        #{shoppingId,jdbcType=VARCHAR},
+      <if test="storeEvaluationInfoId != null" >
+        #{storeEvaluationInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="evaluationId != null" >
-        #{evaluationId,jdbcType=VARCHAR},
+      <if test="storePackageInfoId != null" >
+        #{storePackageInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="packageId != null" >
-        #{packageId,jdbcType=VARCHAR},
+      <if test="storePhotoInfoId != null" >
+        #{storePhotoInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="picturesPathId != null" >
-        #{picturesPathId,jdbcType=VARCHAR},
+      <if test="storeHardwareInfoId != null" >
+        #{storeHardwareInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="hardwareId != null" >
-        #{hardwareId,jdbcType=VARCHAR},
+      <if test="storeEquipmentInfoId != null" >
+        #{storeEquipmentInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="equipmentId != null" >
-        #{equipmentId,jdbcType=VARCHAR},
+      <if test="storeIntegrationInfoId != null" >
+        #{storeIntegrationInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="integralId != null" >
-        #{integralId,jdbcType=VARCHAR},
+      <if test="storeBusinessInfoId != null" >
+        #{storeBusinessInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="historyId != null" >
-        #{historyId,jdbcType=VARCHAR},
+      <if test="maxPeopleSum != null" >
+        #{maxPeopleSum,jdbcType=INTEGER},
       </if>
-      <if test="businessTimeId != null" >
-        #{businessTimeId,jdbcType=VARCHAR},
+      <if test="maxDeskSum != null" >
+        #{maxDeskSum,jdbcType=INTEGER},
+      </if>
+      <if test="storeRankInfoId != null" >
+        #{storeRankInfoId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -270,41 +280,44 @@
       <if test="upTime != null" >
         upTime = #{upTime,jdbcType=VARCHAR},
       </if>
-      <if test="addressId != null" >
-        addressId = #{addressId,jdbcType=VARCHAR},
+      <if test="addressInfoId != null" >
+        addressInfoId = #{addressInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="storeTeamId != null" >
-        storeTeamId = #{storeTeamId,jdbcType=VARCHAR},
+      <if test="storeTeamInfoId != null" >
+        storeTeamInfoId = #{storeTeamInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="statusId != null" >
-        statusId = #{statusId,jdbcType=VARCHAR},
+      <if test="storeShoppingInfoId != null" >
+        storeShoppingInfoId = #{storeShoppingInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="shoppingId != null" >
-        shoppingId = #{shoppingId,jdbcType=VARCHAR},
+      <if test="storeEvaluationInfoId != null" >
+        storeEvaluationInfoId = #{storeEvaluationInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="evaluationId != null" >
-        evaluationId = #{evaluationId,jdbcType=VARCHAR},
+      <if test="storePackageInfoId != null" >
+        storePackageInfoId = #{storePackageInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="packageId != null" >
-        packageId = #{packageId,jdbcType=VARCHAR},
+      <if test="storePhotoInfoId != null" >
+        storePhotoInfoId = #{storePhotoInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="picturesPathId != null" >
-        picturesPathId = #{picturesPathId,jdbcType=VARCHAR},
+      <if test="storeHardwareInfoId != null" >
+        storeHardwareInfoId = #{storeHardwareInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="hardwareId != null" >
-        hardwareId = #{hardwareId,jdbcType=VARCHAR},
+      <if test="storeEquipmentInfoId != null" >
+        storeEquipmentInfoId = #{storeEquipmentInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="equipmentId != null" >
-        equipmentId = #{equipmentId,jdbcType=VARCHAR},
+      <if test="storeIntegrationInfoId != null" >
+        storeIntegrationInfoId = #{storeIntegrationInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="integralId != null" >
-        integralId = #{integralId,jdbcType=VARCHAR},
+      <if test="storeBusinessInfoId != null" >
+        storeBusinessInfoId = #{storeBusinessInfoId,jdbcType=VARCHAR},
       </if>
-      <if test="historyId != null" >
-        historyId = #{historyId,jdbcType=VARCHAR},
+      <if test="maxPeopleSum != null" >
+        maxPeopleSum = #{maxPeopleSum,jdbcType=INTEGER},
       </if>
-      <if test="businessTimeId != null" >
-        businessTimeId = #{businessTimeId,jdbcType=VARCHAR},
+      <if test="maxDeskSum != null" >
+        maxDeskSum = #{maxDeskSum,jdbcType=INTEGER},
+      </if>
+      <if test="storeRankInfoId != null" >
+        storeRankInfoId = #{storeRankInfoId,jdbcType=VARCHAR},
       </if>
     </set>
     where Id = #{id,jdbcType=VARCHAR}
@@ -324,18 +337,19 @@
       state = #{state,jdbcType=VARCHAR},
       deleteStyle = #{deleteStyle,jdbcType=BIT},
       upTime = #{upTime,jdbcType=VARCHAR},
-      addressId = #{addressId,jdbcType=VARCHAR},
-      storeTeamId = #{storeTeamId,jdbcType=VARCHAR},
-      statusId = #{statusId,jdbcType=VARCHAR},
-      shoppingId = #{shoppingId,jdbcType=VARCHAR},
-      evaluationId = #{evaluationId,jdbcType=VARCHAR},
-      packageId = #{packageId,jdbcType=VARCHAR},
-      picturesPathId = #{picturesPathId,jdbcType=VARCHAR},
-      hardwareId = #{hardwareId,jdbcType=VARCHAR},
-      equipmentId = #{equipmentId,jdbcType=VARCHAR},
-      integralId = #{integralId,jdbcType=VARCHAR},
-      historyId = #{historyId,jdbcType=VARCHAR},
-      businessTimeId = #{businessTimeId,jdbcType=VARCHAR}
+      addressInfoId = #{addressInfoId,jdbcType=VARCHAR},
+      storeTeamInfoId = #{storeTeamInfoId,jdbcType=VARCHAR},
+      storeShoppingInfoId = #{storeShoppingInfoId,jdbcType=VARCHAR},
+      storeEvaluationInfoId = #{storeEvaluationInfoId,jdbcType=VARCHAR},
+      storePackageInfoId = #{storePackageInfoId,jdbcType=VARCHAR},
+      storePhotoInfoId = #{storePhotoInfoId,jdbcType=VARCHAR},
+      storeHardwareInfoId = #{storeHardwareInfoId,jdbcType=VARCHAR},
+      storeEquipmentInfoId = #{storeEquipmentInfoId,jdbcType=VARCHAR},
+      storeIntegrationInfoId = #{storeIntegrationInfoId,jdbcType=VARCHAR},
+      storeBusinessInfoId = #{storeBusinessInfoId,jdbcType=VARCHAR},
+      maxPeopleSum = #{maxPeopleSum,jdbcType=INTEGER},
+      maxDeskSum = #{maxDeskSum,jdbcType=INTEGER},
+      storeRankInfoId = #{storeRankInfoId,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

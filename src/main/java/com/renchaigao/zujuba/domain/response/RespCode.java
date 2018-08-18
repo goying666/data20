@@ -28,6 +28,7 @@ public enum  RespCode {
     USERINFONONE(-1007,"No userInfo."),
     PASSWORDMISSING(-1008,"No set pwd."),
     TELEPHONENOJOIN(-1009,"Telephone is not join."),
+    NOUSER(-1010,"No user"),
     /* user login part*/
     STOREWRONG(-1100,"Storeinfo is wrong"),
     STOREFILEWRONG(-1101,"StoreFile is wrong"),

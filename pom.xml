@@ -15,7 +15,16 @@
             <artifactId>lombok</artifactId>
             <version>1.16.10</version>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>com.renchaigao.zujuba</groupId>
+            <artifactId>mergeJAR</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
+    </dependencies>
+<!--
+    mvn install:install-file -Dfile=F:\00project\zjb\code\server\data2.0\data20\target\data2.0-1.0-SNAPSHOT.jar -DgroupId=com.renchaigao.zujuba -DartifactId=data20 -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+
+-->
 
 </project>
