@@ -9,6 +9,8 @@ import lombok.Setter;
 @Setter
 public class TeamInfo extends BasicObject {
 
+    private String teamNumber;
+
     private Integer playerMax;
 
     private Integer playerMin;
@@ -23,7 +25,7 @@ public class TeamInfo extends BasicObject {
 
     private String endTime;
 
-    private String createrStyle;
+    private String createrStyle; //创建方式；"user"
 
     private String createrNote;
 

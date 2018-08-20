@@ -8,4 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class teamGameInfo extends gameInfo {
+    private boolean select_LRS = false;
+    private boolean select_THQBY = false;
+
 }
