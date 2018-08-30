@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class allRanks extends BasicObject {
+public class UserSpendInfo extends BasicObject {
 
 }

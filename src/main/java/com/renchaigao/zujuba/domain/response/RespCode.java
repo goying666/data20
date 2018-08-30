@@ -33,7 +33,19 @@ public enum  RespCode {
     STOREWRONG(-1100,"Storeinfo is wrong"),
     STOREFILEWRONG(-1101,"StoreFile is wrong"),
 
-    TEAMHAD(-1201,"Same team had exists");
+    TEAMHAD(-1201,"Same team had exists"),
+
+
+    /* MXT world game part*/
+//    init game part
+    GAMEWAIT(1310,"game state is WAIT"),
+    GAMEINIT(1311,"game state is INIT"),
+    GAMEDOING(1312,"game state is DOING"),
+    GAMEFINISH(1313,"game state is FINISH"),
+    EQUIPMENTBASICEXIST(-1301,"equipment already exit");
+
+
+    /* MXT world game part*/
 
     private int code;
     private String msg;

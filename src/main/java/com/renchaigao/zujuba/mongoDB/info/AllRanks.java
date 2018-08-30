@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class messageInfo extends BasicObject {
+public class AllRanks extends BasicObject {
 
 }

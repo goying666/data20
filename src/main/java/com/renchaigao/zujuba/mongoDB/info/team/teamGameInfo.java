@@ -10,5 +10,6 @@ import lombok.Setter;
 public class teamGameInfo extends gameInfo {
     private boolean select_LRS = false;
     private boolean select_THQBY = false;
+    private boolean select_MXTSJ = false;
 
 }

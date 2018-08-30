@@ -3,8 +3,8 @@ import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class userSpendInfo extends BasicObject {
+@Getter
+public class UserPermissionInfo extends BasicObject {
 
 }

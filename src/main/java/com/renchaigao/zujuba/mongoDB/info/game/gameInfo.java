@@ -17,6 +17,7 @@ public class gameInfo extends BasicObject {
     private ArrayList<gameDoing> gameDoingArrayList;
     private String startTime;
     private String endTime;
-    private String state = "WAIT";//"WAIT":等待；“DOING”：进行；“STOP”：暂停；“FINISH”：完结；
+    private String state = "WAIT";//"WAIT":等待；"INIT":初始化完毕;“DOING”：进行；“STOP”：暂停；“FINISH”：完结；
     private String buildStyle;//创建方式；
+    private String gameDataId;
 }

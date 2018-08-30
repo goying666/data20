@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-public class playersInfo extends BasicObject {
+public class PlayersInfo extends BasicObject {
     private ArrayList<PlayerInfo> playerArrayList;
     private Integer boySum = 0;
     private Integer girlSum = 0;

@@ -16,12 +16,12 @@ public class UserInfo extends User {
     private myStoresInfo myStoresInfo;
     private Photo myPhotoInfo;
     private AddressInfo myAddressInfo;
-    private userSpendInfo mySpendInfo;
+    private UserSpendInfo mySpendInfo;
     private UserRank myRankInfo;
-    private userFriendInfo myFreiendInfo;
+    private UserFriendInfo myFreiendInfo;
 //    private ; //积分信息
 //    private ; //名单信息
-    private userPermissionInfo myPermissionInfo;
+    private UserPermissionInfo myPermissionInfo;
     private UserOpenInfo userOpenInfo;
 
 
