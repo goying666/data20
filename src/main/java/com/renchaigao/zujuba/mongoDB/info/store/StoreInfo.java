@@ -26,6 +26,17 @@ public class StoreInfo extends Store {
     private StoreRankInfo storeRankInfo = new StoreRankInfo();
 
     public void setStoreAllInfoId() {
+        this.addressInfo.setId(this.getId());
+        this.storeTeamInfo.setId(this.getId());
+        this.storeShoppingInfo.setId(this.getId());
+        this.storeEvaluationInfo.setId(this.getId());
+        this.storePackageInfo.setId(this.getId());
+        this.storePhotoInfo.setId(this.getId());
+        this.storeHardwareInfo.setId(this.getId());
+        this.storeEquipmentInfo.setId(this.getId());
+        this.storeIntegrationInfo.setId(this.getId());
+        this.storeBusinessInfo.setId(this.getId());
+        this.storeRankInfo.setId(this.getId());
         this.setAddressInfoId(addressInfo.getId());
         this.setStoreTeamInfoId(storeTeamInfo.getId());
         this.setStoreShoppingInfoId(storeShoppingInfo.getId());

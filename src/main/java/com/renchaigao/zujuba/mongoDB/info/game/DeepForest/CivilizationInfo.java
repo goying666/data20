@@ -17,5 +17,9 @@ public class CivilizationInfo extends BasicObject {
     private Integer defenceValue;
     private Integer technologyValue;
     private ArrayList<MessageInfo> ownerMessage;
+    private String userName;
+    private String signature;
+    private String userImagePath;
+    private String state;//文明信息
 
 }

@@ -23,6 +23,8 @@ public class TeamInfo extends BasicObject {
 
     private String startTime;
 
+    private String startAllTime;
+
     private String endTime;
 
     private String createrStyle; //创建方式；"user"
@@ -36,10 +38,18 @@ public class TeamInfo extends BasicObject {
     private String createrId;
 
     private AddressInfo addressInfo = new AddressInfo();
-    private teamPlayerInfo teamPlayerInfo = new teamPlayerInfo();
-    private teamGameInfo teamGameInfo = new teamGameInfo();
-    private teamSpendInfo teamSpendInfo = new teamSpendInfo();
-    private teamFilterInfo teamFilterInfo = new teamFilterInfo();
-    private teamMessageInfo teamMessageInfo = new teamMessageInfo();
+    private TeamPlayerInfo teamPlayerInfo = new TeamPlayerInfo();
+    private TeamGameInfo teamGameInfo = new TeamGameInfo();
+    private TeamSpendInfo teamSpendInfo = new TeamSpendInfo();
+    private TeamFilterInfo teamFilterInfo = new TeamFilterInfo();
+    private TeamMessageInfo teamMessageInfo = new TeamMessageInfo();
 
+    public void setStoreAllInfoId() {
+        this.addressInfo.setId(this.getId());
+        this.teamPlayerInfo.setId(this.getId());
+        this.teamGameInfo.setId(this.getId());
+        this.teamSpendInfo.setId(this.getId());
+        this.teamFilterInfo.setId(this.getId());
+        this.teamMessageInfo.setId(this.getId());
+    }
 }

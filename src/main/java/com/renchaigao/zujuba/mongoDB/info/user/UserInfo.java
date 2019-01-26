@@ -11,18 +11,16 @@ import lombok.Setter;
 @Getter
 public class UserInfo extends User {
 
-    private myTeamsInfo myTeamsInfo;
-    private myPlayGamesInfo myPlayGamesInfo;
-    private myStoresInfo myStoresInfo;
-    private Photo myPhotoInfo;
-    private AddressInfo myAddressInfo;
-    private UserSpendInfo mySpendInfo;
-    private UserRank myRankInfo;
-    private UserFriendInfo myFreiendInfo;
-//    private ; //积分信息
-//    private ; //名单信息
-    private UserPermissionInfo myPermissionInfo;
+    private UserRank userRank;
+    private UserTeams userTeams;
+    private UserGames userGames;
+    private UserPlaces userPlaces;
+    private UserPhotosInfo userPhotosInfo;
+    private AddressInfo addressInfo;
+    private UserSpendInfo userSpendInfo;
+    private UserMessagesInfo userMessagesInfo;
+    private UserFriendInfo userFriendInfo;
+    private UserIntegrationInfo userIntegrationInfo;
+    private UserPermissionInfo userPermissionInfo;
     private UserOpenInfo userOpenInfo;
-
-
 }

@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class myStores extends BasicObject {
+public class UserGamesInfo extends BasicObject {
 
 }

@@ -12,7 +12,10 @@ public class DeepForestGameInfo extends BasicObject {
     private String era;
     private Integer round;
     private String roundIntroduce;
+    private String roundIntroduceInfo;
     private Integer countDown;
+    private Integer destroySum;
+    private Integer activeSum;
 
     private ArrayList<StarInfo> allStarInfo;
     private ArrayList<CivilizationInfo> allCivilizationInfo;

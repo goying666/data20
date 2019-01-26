@@ -1,4 +1,4 @@
-package com.renchaigao.zujuba.mongoDB.info.user;
+package com.renchaigao.zujuba.mongoDB.info.team;
 
 import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class myPlayGames extends BasicObject {
+public class UserTeamInfo extends BasicObject {
 
 }

@@ -4,8 +4,8 @@ import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class myStoresInfo extends BasicObject {
+@Getter
+public class UserIntegrationInfo extends BasicObject {
 
 }

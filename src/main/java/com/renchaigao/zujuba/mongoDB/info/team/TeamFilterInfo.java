@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class teamFilterInfo extends BasicObject {
+public class TeamFilterInfo extends BasicObject {
     private Integer teamId;
 
     private String integrityScore;

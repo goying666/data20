@@ -1,10 +1,11 @@
-package com.renchaigao.zujuba.mongoDB.info;
+package com.renchaigao.zujuba.mongoDB.info.user;
+
 import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class MessageInfo extends BasicObject {
+public class UserGames extends BasicObject {
 
 }

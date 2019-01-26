@@ -12,6 +12,8 @@ public class Photo extends BasicObject {
 
     private String ownerClass;
     private String ownerId;
+    private String photoPath;
+    private String photoName;
     private ArrayList<String> pathList;
     private String photoNote;
 

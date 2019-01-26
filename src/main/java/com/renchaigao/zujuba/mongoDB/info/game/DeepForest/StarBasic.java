@@ -6,14 +6,9 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class StarInfo extends BasicObject {
-    private Integer number;
+public class StarBasic extends BasicObject {
     private String name;
-    private Boolean destroy;
-    private CivilizationInfo civilizationInfo;
-//            moveInfo
-    private String imagePath;
     private String history;
-
+    private String imagePath;
 
 }

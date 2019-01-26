@@ -4,7 +4,8 @@ import com.renchaigao.zujuba.BasicObject;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class teamSpendInfo extends BasicObject {
+@Setter
+public class CityTeamInfo extends BasicObject {
+    private String id;
 }

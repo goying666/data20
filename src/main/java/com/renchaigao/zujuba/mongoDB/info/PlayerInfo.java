@@ -31,4 +31,6 @@ public class PlayerInfo extends BasicObject {
 
     private UserOpenInfo userOpenInfo = new UserOpenInfo();
 
+    private  Integer playerNumber;
+
 }

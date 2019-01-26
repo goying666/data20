@@ -1,7 +1,8 @@
 package com.renchaigao.zujuba.dao;
 
 public class Store {
-    private String id ;
+    private String id;
+
     private String ownerId;
 
     private String name;
@@ -26,7 +27,7 @@ public class Store {
 
     private Boolean deleteStyle;
 
-    private String upTime ;
+    private String upTime;
 
     private String addressInfoId;
 
