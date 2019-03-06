@@ -16,5 +16,4 @@ public class MessageNoteInfo {
     private String state;
     private Integer unreadMessageSum;//消息数
     private String currentContent;//当前最后一条消息；
-
 }

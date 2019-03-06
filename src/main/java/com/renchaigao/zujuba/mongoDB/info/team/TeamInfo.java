@@ -10,32 +10,27 @@ import lombok.Setter;
 public class TeamInfo extends BasicObject {
 
     private String teamNumber;
-
     private Integer playerMax;
-
     private Integer playerMin;
-
     private Integer playerNow;
-
-    private String createTime;
-
     private String startDate;
-
     private String startTime;
-
     private String startAllTime;
-
     private String endTime;
-
     private String createrStyle; //创建方式；"user"
-
     private String createrNote;
-
     private String state;
-
     private String teamName;
-
+    private String placeName;
     private String createrId;
+    private String joinCode = null;//加入密码
+
+    private Integer startHour;
+    private Integer startMinute;
+    private Integer endHour;
+    private Integer endMinute;
+
+
 
     private AddressInfo addressInfo = new AddressInfo();
     private TeamPlayerInfo teamPlayerInfo = new TeamPlayerInfo();
@@ -44,12 +39,4 @@ public class TeamInfo extends BasicObject {
     private TeamFilterInfo teamFilterInfo = new TeamFilterInfo();
     private TeamMessageInfo teamMessageInfo = new TeamMessageInfo();
 
-    public void setStoreAllInfoId() {
-        this.addressInfo.setId(this.getId());
-        this.teamPlayerInfo.setId(this.getId());
-        this.teamGameInfo.setId(this.getId());
-        this.teamSpendInfo.setId(this.getId());
-        this.teamFilterInfo.setId(this.getId());
-        this.teamMessageInfo.setId(this.getId());
-    }
 }

@@ -12,4 +12,5 @@ public class BasicObject {
     private String id = UUIDUtil.getUUID();
     private Boolean deleteStyle = false;
     private String upTime = dateUse.GetStringDateNow();
+    private String createTime = dateUse.GetStringDateNow();
 }

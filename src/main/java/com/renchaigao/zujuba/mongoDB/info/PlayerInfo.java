@@ -23,9 +23,10 @@ public class PlayerInfo extends BasicObject {
      ******************************/
     private String comeFrom;
     /*******************************
-       ""T"":正常组队;
-       ""L"":（游戏开始后）临时进入;
-       ""S"":（游戏开始后）系统推荐;
+     * PLAYER_COME_FROM= {"","",""};
+       ""TEAMJOIN"":正常组队;
+       ""OFFLINE"":（游戏开始后）临时进入;
+       ""INVITE"":（游戏开始后）系统推荐;
      *******************************/
     private String joinTime = dateUse.GetStringDateNow();
 

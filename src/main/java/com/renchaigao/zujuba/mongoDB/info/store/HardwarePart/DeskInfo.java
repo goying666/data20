@@ -14,5 +14,7 @@ public class DeskInfo extends BasicObject {
     private String instruction = "";
     private String deskClass = "";
     private String storeDesk = "";
+    private Integer maxUserNum = 12;
+    private Integer minUserNum = 1;
     private ArrayList<ChairInfo> chairInfos;
 }

@@ -9,15 +9,17 @@ import lombok.Setter;
 public class TeamFilterInfo extends BasicObject {
     private Integer teamId;
 
-    private String integrityScore;
+    private Integer integrityScore;
 
-    private String sexRatio;
+    private Integer genderRatio;
 
-    private String careerScreening;
+    private Integer careerScreening;
 
-    private String ageScreening;
+    private Integer ageScreening;
 
-    private String evaluationScreening;
+    private Integer evaluationScreening;
 
-    private String marriage;
+    private Integer marriage;
+
+    private Integer settleWay;
 }

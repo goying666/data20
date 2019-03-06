@@ -25,7 +25,7 @@ public class User {
 
     private String token;
 
-    private String picPath;
+    private String picPath = "/system/user.jpg";
 
     private Boolean deleteStyle;
 

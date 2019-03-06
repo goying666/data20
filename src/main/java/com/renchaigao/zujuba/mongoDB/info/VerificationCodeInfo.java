@@ -9,7 +9,6 @@ import normal.dateUse;
 @Getter
 public class VerificationCodeInfo extends BasicObject{
 
-    private String createTime = dateUse.GetStringDateNow();
 
     private String code;
     private String phoneNumber;
