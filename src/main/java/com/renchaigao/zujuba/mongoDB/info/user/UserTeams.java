@@ -9,8 +9,8 @@ import java.util.ArrayList;
 @Getter
 @Setter
 public class UserTeams extends BasicObject {
-    private ArrayList<String> allTeamsList;
-    private ArrayList<String> doingTeamsList;
-    private ArrayList<String> finishTeamsList;
-    private ArrayList<String> createTeamsList;
+    private ArrayList<String> allTeamsList = new ArrayList<String>();
+    private ArrayList<String> doingTeamsList = new ArrayList<String>();
+    private ArrayList<String> finishTeamsList = new ArrayList<String>();
+    private ArrayList<String> createTeamsList = new ArrayList<String>();
 }

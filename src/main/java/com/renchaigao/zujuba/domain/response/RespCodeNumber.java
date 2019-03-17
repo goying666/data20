@@ -37,6 +37,45 @@ public class RespCodeNumber {
     public static final int USER_UPDATE_FAIL = -1050;//更新失败；
     public static final int USER_UPDATE_EXCEPTION = -1051;//更新异常；
     public static final int USER_UPDATE_WRONG = -1052;//更新信息错误；
+    public static final int USER_UPDATE_INFO_SUCCESS = 1400;//更新个人信息成功
+    public static final int USER_UPDATE_INFO_FAIL = -1400;//更新个人信息失败
+    public static final int USER_MINE_INFO_SUCCESS = 1401;//查询个人信息（主页）成功
+    public static final int USER_MINE_INFO_FAIL = -1401;//查询个人信息（主页）失败
 
+
+    //    club part:
+    public static final int CLUB_UPDATE_SUCCESS = 1060;//更新信息成功;
+    public static final int CLUB_UPDATE_FAIL = -1060;//更新信息错误；
+    public static final int CLUB_CREATE_SUCCESS = 1300;//创建俱乐部成功
+    public static final int CLUB_CREATE_FAIL = -1300;//创建俱乐部失败
+    public static final int CLUB_HAD_BEEN_CREATE = -1301;//俱乐部已创建过
+    public static final int CLUB_CREATE_LIMIT = -1302;//超过俱乐部数量限制
+
+    //    message part:
+    public static final int MESSAGE_USER_GET_ALL_SUCCESS = 1070;//用户查询新消息信息成功
+    public static final int MESSAGE_USER_GET_ALL_FAIL = -1070;//用户查询新消息信息失败
+    public static final int MESSAGE_USER_GET_ALL_ZERO = -1071;//用户查询新消息信息数为0
+    public static final int MESSAGE_USER_GET_TEAM_SUCCESS = 1071;//查询一个Team内的未读消息成功，返回非0条
+    public static final int MESSAGE_USER_GET_TEAM_ZERO = -1072;//查询一个Team内的未读消息，返回为0条
+    public static final int MESSAGE_USER_GET_TEAM_FAIL = -1073;//查询一个Team内的未读消息失败
+    public static final int MESSAGE_USER_GET_CLUB_SUCCESS = 1072;//查询一个Club内的未读消息成功，返回非0条
+    public static final int MESSAGE_USER_GET_CLUB_ZERO = -1074;//查询一个Club内的未读消息，返回为0条
+    public static final int MESSAGE_USER_GET_CLUB_FAIL = -1075;//查询一个Club内的未读消息失败
+    public static final int MESSAGE_USER_GET_FRIEND_SUCCESS = 1073;//查询一个Friend内的未读消息成功，返回非0条
+    public static final int MESSAGE_USER_GET_FRIEND_ZERO = -1076;//查询一个Friend内的未读消息，返回为0条
+    public static final int MESSAGE_USER_GET_FRIEND_FAIL = -1077;//查询一个Friend内的未读消息失败
+    public static final int MESSAGE_ADD_SYSTEM_SUCCESS = 1074;//添加系统消息成功
+    public static final int MESSAGE_ADD_SYSTEM_FAIL = -1078;//添加系统消息失败
+    public static final int MESSAGE_ADD_TEAM_SUCCESS = 1075;//添加team消息成功
+    public static final int MESSAGE_ADD_TEAM_FAIL = -1079;//添加team消息失败
+    public static final int MESSAGE_ADD_FRIEND_SUCCESS = 1076;//添加friend消息成功
+    public static final int MESSAGE_ADD_FRIEND_FAIL = -1080;//添加friend消息失败
+    public static final int MESSAGE_ADD_CLUB_SUCCESS = 1077;//添加club消息成功
+    public static final int MESSAGE_ADD_CLUB_FAIL = -1081;//添加club消息失败
+
+
+    //    Team Part:
+    public static final int TEAM_JOIN_SUCCESS = 1202;//加入组局成功
+    public static final int TEAM_JOIN_FAIL = -1203;//加入组局失败
 
 }

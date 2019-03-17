@@ -9,6 +9,8 @@ import com.renchaigao.zujuba.mongoDB.info.store.HardwarePart.StoreHardwareInfo;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+
 @Getter
 @Setter
 public class StoreInfo extends Store {
@@ -24,6 +26,7 @@ public class StoreInfo extends Store {
     private StoreIntegrationInfo storeIntegrationInfo = new StoreIntegrationInfo();
     private StoreBusinessInfo storeBusinessInfo = new StoreBusinessInfo();
     private StoreRankInfo storeRankInfo = new StoreRankInfo();
+    private ArrayList<String> StoreClubArray = new ArrayList<String>();
 
     public void setStoreAllInfoId() {
         this.addressInfo.setId(this.getId());

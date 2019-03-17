@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 public class UserInfo extends User {
 
-    private UserRank userRank;
+    private UserRank userRank ;
     private UserTeams userTeams;
     private UserGames userGames;
     private UserPlaces userPlaces;
@@ -23,4 +23,5 @@ public class UserInfo extends User {
     private UserIntegrationInfo userIntegrationInfo;
     private UserPermissionInfo userPermissionInfo;
     private UserOpenInfo userOpenInfo;
+    private UserClubInfo userClubInfo;
 }

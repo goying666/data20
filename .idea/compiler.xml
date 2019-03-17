@@ -9,7 +9,7 @@
         <module name="data20" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="data20" target="1.5" />
     </bytecodeTargetLevel>
   </component>

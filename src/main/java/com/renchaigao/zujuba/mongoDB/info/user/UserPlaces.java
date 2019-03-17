@@ -10,6 +10,6 @@ import java.util.ArrayList;
 @Setter
 public class UserPlaces extends BasicObject {
 
-    private ArrayList<String> allPlaceId = null;
+    private ArrayList<String> allPlaceId = new ArrayList<String>();
 
 }

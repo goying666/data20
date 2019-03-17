@@ -17,4 +17,6 @@ public class UserMessagesInfo extends BasicObject {
     private Integer nowSystemMessagesNumber = 0;
     private ArrayList<String> userFriendsMessageIdList = new ArrayList<String>();
     private Integer nowFriendMessagesNumber = 0;
+    private ArrayList<String> userClubMessageIdList = new ArrayList<String>();
+    private Integer nowClubMessagesNumber = 0;
 }

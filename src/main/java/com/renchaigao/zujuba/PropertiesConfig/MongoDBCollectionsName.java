@@ -30,11 +30,11 @@ public class MongoDBCollectionsName {
     public final static String MONGO_DB_COLLECIONS_NAME_USER_PLACES = "userPlaces";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_PHOTOS = "userPhotos";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_SPEND = "userSpend";
-    public final static String MONGO_DB_COLLECIONS_NAME_USER_MESSAGE = "userMessages";
+//    public final static String MONGO_DB_COLLECIONS_NAME_USER_MESSAGE = "userMessages";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_MESSAGE_INFO = "userMessagesInfo";
-    public final static String MONGO_DB_COLLECIONS_NAME_USER_TEAM_MESSAGE = "userTeamMessages";
-    public final static String MONGO_DB_COLLECIONS_NAME_USER_SYSTEM_MESSAGE = "userSystemMessages";
-    public final static String MONGO_DB_COLLECIONS_NAME_USER_FRIEND_MESSAGE = "userFriendMessages";
+//    public final static String MONGO_DB_COLLECIONS_NAME_USER_TEAM_MESSAGE = "userTeamMessages";
+//    public final static String MONGO_DB_COLLECIONS_NAME_USER_SYSTEM_MESSAGE = "userSystemMessages";
+//    public final static String MONGO_DB_COLLECIONS_NAME_USER_FRIEND_MESSAGE = "userFriendMessages";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_FRIEND = "userFriend";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_INTEGRATION = "userIntegration";
     public final static String MONGO_DB_COLLECIONS_NAME_USER_PERMISSION = "userPermission";
@@ -44,19 +44,23 @@ public class MongoDBCollectionsName {
 //    PLAYER part
 
     //    MESSAGE part
-    public final static String MONGO_DB_COLLECIONS_NAME_MESSAGE_INFO = "messageInfo";
+//    public final static String MONGO_DB_COLLECIONS_NAME_MESSAGE_INFO = "messageInfo";
+    public final static String MONGO_DB_COLLECIONS_NAME_TEAM_MESSAGES = "teamMessages";
+    public final static String MONGO_DB_COLLECIONS_NAME_FRIEND_MESSAGES = "friendMessages";
+    public final static String MONGO_DB_COLLECIONS_NAME_CLUB_MESSAGES = "clubMessages";
+    public final static String MONGO_DB_COLLECIONS_NAME_SYSTEM_MESSAGES = "systemMessages";
 
     //    TEAM part
     public final static String MONGO_DB_COLLECIONS_NAME_TEAM_PLAYER_INFO = "teamPlayerInfo";
     public final static String MONGO_DB_COLLECIONS_NAME_TEAM_GAME_INFO = "teamGameInfo";
     public final static String MONGO_DB_COLLECIONS_NAME_TEAM_INFO = "teamInfo";
-    public final static String MONGO_DB_COLLECIONS_NAME_TEAM_MESSAGE_INFO = "teamMessageInfo";
+//    public final static String MONGO_DB_COLLECIONS_NAME_TEAM_MESSAGE_INFO = "teamMessageInfo";
 
 //    club part，俱乐部
     public final static String MONGO_DB_COLLECIONS_NAME_CLUB_INFO = "clubInfo";
     public final static String MONGO_DB_COLLECIONS_NAME_CLUB_USER_INFO = "clubUserInfo";
     public final static String MONGO_DB_COLLECIONS_NAME_CLUB_TEAM_INFO = "clubTeamInfo";
-    public final static String MONGO_DB_COLLECIONS_NAME_CLUB_MESSAGE_INFO = "clubMessageInfo";
+//    public final static String MONGO_DB_COLLECIONS_NAME_CLUB_MESSAGE_INFO = "clubMessageInfo";
 
 
 

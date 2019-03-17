@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 public class UserPhotosInfo extends BasicObject {
-    private ArrayList<Photo> allPhotoArrayList;
-    private Photo headPortrait;
-    private Photo headPortraitBackground;
+    private ArrayList<Photo> allPhotoArrayList=new ArrayList<Photo>();
+    private Photo headPortrait = new Photo();
+    private Photo headPortraitBackground = new Photo();
 }

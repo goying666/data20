@@ -10,6 +10,9 @@ import java.util.ArrayList;
 @Setter
 public class ClubInfo extends BasicObject {
     //    =IF(ISBLANK(C6),"",CONCATENATE("private ",D6," ",C6," ",IF(ISBLANK(E6),IF(D6="String","= "&"""null"&"""",IF(D6="Integer","= 0",IF(FIND("ArrayList",D6,1)=1,CONCATENATE("= new ",D6,"()"),""))),CONCATENATE("= ",E6)),"; //",F6))
+    private String placeClass = "null"; //场地类型
+    private String placeId = "null"; //场地id
+    private String placeName = "null"; //场地名称
     private String createrId = "null"; //创建者ID
     private Integer boyNum = 0; //男生数量
     private Integer girlNum = 0; //女生数量

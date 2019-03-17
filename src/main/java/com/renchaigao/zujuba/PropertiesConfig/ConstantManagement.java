@@ -32,6 +32,11 @@ public class ConstantManagement {
     public final static String USER_SEND_MESSAGE = "user_send_messge";
     public final static String FRIEND_SEND_MESSAGE = "friend_send_messge";
     public final static String TEAM_SEND_MESSAGE = "team_send_messge";
+    public final static String CLUB_SEND_MESSAGE = "club_send_messge";
+
+    /* 配置类 :*/
+    public final static int CONFIG_RENAME_CLUB_TIMES = 3;
+
 
 
 }

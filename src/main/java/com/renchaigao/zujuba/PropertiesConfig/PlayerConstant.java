@@ -18,7 +18,9 @@ public class PlayerConstant {
     public final static String PLAYER_STATE_QUIT = "QUIT";
     public final static String PLAYER_STATE_FINISH = "FINISH";
 
-    public final static String[] PLAYER_COME_FROM = {"TEAMJOIN", "OFFLINE", "INVITE"};
+    public final static String PLAYER_COME_FROM_TEAMJOIN = "TEAMJOIN";
+    public final static String PLAYER_COME_FROM_OFFLINE = "OFFLINE";
+    public final static String PLAYER_COME_FROM_INVITE = "INVITE";
 
 
 }
